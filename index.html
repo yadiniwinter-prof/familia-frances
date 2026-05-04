@@ -1,99 +1,110 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Devinettes de la Famille</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+        body { font-family: 'Fredoka', sans-serif; background-color: #f0f9ff; }
+        .answer-btn { transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .answer-btn:active { transform: scale(0.95); }
+        .progress-bar { transition: width 0.4s ease; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .animate-bounce-short { animation: bounce 0.5s ease-in-out 1; }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="fr"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Les Devinettes de la Famille&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&amp;display=swap');</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Fredoka', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f0f9ff;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.answer-btn {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.answer-btn:active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: scale(0.95);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>.progress-bar {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: width 0.4s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>@keyframes bounce {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>0%, 100% { transform: translateY(0); }</p>
-<p class="p1"><span class="Apple-converted-space">            </span>50% { transform: translateY(-10px); }</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.animate-bounce-short {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>animation: bounce 0.5s ease-in-out 1;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="min-h-screen flex items-center justify-center p-4"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="game-container" class="w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-blue-500 p-6 text-white text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-2xl font-bold italic"&gt;👪 Les Devinettes&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-blue-100 text-sm"&gt;Exercice de Français&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="w-full bg-gray-100 h-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="progress" class="bg-yellow-400 h-full progress-bar" style="width: 0%"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="start-screen" class="text-center space-y-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-6xl mb-4"&gt;🏠&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-semibold text-gray-700"&gt;Tu connais bien ta famille ?&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-500"&gt;Réponds aux 10 devinettes correctement !&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="startGame()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-2xl shadow-lg transform transition active:scale-95 text-xl"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Commencer !</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="quiz-screen" class="hidden space-y-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-between items-center text-sm font-medium text-gray-400"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span id="question-counter"&gt;Question 1/10&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span id="score-display"&gt;Score: 0&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="question-box" class="min-h-[100px] flex items-center justify-center text-center p-4 bg-blue-50 rounded-2xl border-2 border-blue-100"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p id="question-text" class="text-lg font-semibold text-blue-900 leading-tight"&gt;&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="options-container" class="grid grid-cols-1 gap-3"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="result-screen" class="hidden text-center space-y-6 py-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-3xl font-bold text-gray-800"&gt;Bravo ! 🎉&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-6xl" id="result-emoji"&gt;⭐&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-500"&gt;Ton score final est de :&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p id="final-score" class="text-5xl font-black text-blue-600"&gt;0/10&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button onclick="restartGame()" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-2xl shadow-lg text-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Rejouer 🔄</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="feedback" class="fixed inset-0 flex items-</p>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div id="game-container" class="w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <div class="bg-blue-500 p-6 text-white text-center">
+            <h1 class="text-2xl font-bold italic">👪 Les Devinettes</h1>
+            <p class="text-blue-100 text-sm">Exercice de Français</p>
+        </div>
+        <div class="w-full bg-gray-100 h-2">
+            <div id="progress" class="bg-yellow-400 h-full progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="p-6">
+            <div id="start-screen" class="text-center space-y-6">
+                <div class="text-6xl mb-4">🏠</div>
+                <h2 class="text-xl font-semibold text-gray-700">Tu connais bien ta famille ?</h2>
+                <p class="text-gray-500">Réponds aux 10 devinettes correctement !</p>
+                <button onclick="startGame()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-2xl shadow-lg transform transition active:scale-95 text-xl">Commencer !</button>
+            </div>
+            <div id="quiz-screen" class="hidden space-y-6">
+                <div class="flex justify-between items-center text-sm font-medium text-gray-400">
+                    <span id="question-counter">Question 1/10</span>
+                    <span id="score-display">Score: 0</span>
+                </div>
+                <div id="question-box" class="min-h-[100px] flex items-center justify-center text-center p-4 bg-blue-50 rounded-2xl border-2 border-blue-100">
+                    <p id="question-text" class="text-lg font-semibold text-blue-900 leading-tight"></p>
+                </div>
+                <div id="options-container" class="grid grid-cols-1 gap-3"></div>
+            </div>
+            <div id="result-screen" class="hidden text-center space-y-6 py-4">
+                <h2 class="text-3xl font-bold text-gray-800">Bravo ! 🎉</h2>
+                <div class="text-6xl" id="result-emoji">⭐</div>
+                <div class="space-y-2">
+                    <p class="text-gray-500">Ton score final est de :</p>
+                    <p id="final-score" class="text-5xl font-black text-blue-600">0/10</p>
+                </div>
+                <button onclick="restartGame()" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-2xl shadow-lg text-lg">Rejouer 🔄</button>
+            </div>
+        </div>
+        <div id="feedback" class="fixed inset-0 flex items-center justify-center pointer-events-none hidden z-50">
+            <div id="feedback-icon" class="text-8xl"></div>
+        </div>
+    </div>
+    <script>
+        const quizData = [
+            { q: "C'est le mari de ma belle-mère. Qui est-ce ?", a: "c'est le beau-père", options: ["c'est le beau-père", "c'est l'oncle", "c'est le gendre"] },
+            { q: "C'est le père de mon père. Qui est-ce ?", a: "c'est le grand-père", options: ["c'est le grand-père", "c'est le cousin", "c'est le parrain"] },
+            { q: "C'est le mari de ma tante. Qui est-ce ?", a: "c'est l'oncle", options: ["c'est l'oncle", "c'est le neveu", "c'est le frère"] },
+            { q: "C'est le fils de mon oncle. Qui est-ce ?", a: "c'est le cousin", options: ["c'est le cousin", "c'est le frère", "c'est le fils"] },
+            { q: "C'est le frère de ma femme. Qui est-ce ?", a: "c'est le beau-frère", options: ["c'est le beau-frère", "c'est le gendre", "c'est le cousin"] },
+            { q: "C'est la soeur de ma femme. Qui est-ce ?", a: "c'est la belle-soeur", options: ["c'est la belle-soeur", "c'est la cousine", "c'est la nièce"] },
+            { q: "Ce sont les parents de mon mari. Qui sont-ce ?", a: "ce sont les beaux-parents", options: ["ce sont les beaux-parents", "ce sont les grands-parents", "ce sont les oncles"] },
+            { q: "C'est la mère de ma mère. Qui est-ce ?", a: "c'est la grand-mère", options: ["c'est la grand-mère", "c'est la tante", "c'est la belle-mère"] },
+            { q: "C'est la fille de ma grand-mère. Qui est-ce ?", a: "c'est la mère ou la tante", options: ["c'est la mère ou la tante", "c'est la cousine", "c'est la nièce"] },
+            { q: "C'est le frère de ma cousine. Qui est-ce ?", a: "c'est le cousin", options: ["c'est le cousin", "c'est le neveu", "c'est l'oncle"] }
+        ];
+        let currentQuestion = 0, score = 0, canAnswer = true;
+        function startGame() { document.getElementById('start-screen').classList.add('hidden'); document.getElementById('quiz-screen').classList.remove('hidden'); showQuestion(); }
+        function showQuestion() {
+            canAnswer = true; const data = quizData[currentQuestion];
+            document.getElementById('question-text').innerText = data.q;
+            document.getElementById('question-counter').innerText = `Question ${currentQuestion + 1}/${quizData.length}`;
+            document.getElementById('progress').style.width = `${(currentQuestion / quizData.length) * 100}%`;
+            const container = document.getElementById('options-container'); container.innerHTML = '';
+            [...data.options].sort(() => Math.random() - 0.5).forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = "answer-btn w-full p-4 bg-white border-2 border-gray-200 rounded-2xl text-left hover:border-blue-400 hover:bg-blue-50 font-medium text-gray-700 shadow-sm";
+                btn.innerText = opt; btn.onclick = () => checkAnswer(opt, btn); container.appendChild(btn);
+            });
+        }
+        function checkAnswer(selected, btn) {
+            if (!canAnswer) return; canAnswer = false;
+            const correctAnswer = quizData[currentQuestion].a;
+            const feedbackIcon = document.getElementById('feedback-icon');
+            if (selected === correctAnswer) {
+                score++; btn.classList.replace('border-gray-200', 'border-green-500'); btn.classList.add('bg-green-50', 'text-green-700');
+                feedbackIcon.innerText = "✅"; showFeedback();
+            } else {
+                btn.classList.replace('border-gray-200', 'border-red-500'); btn.classList.add('bg-red-50', 'text-red-700');
+                feedbackIcon.innerText = "❌"; showFeedback();
+                Array.from(document.getElementById('options-container').children).forEach(child => { if (child.innerText === correctAnswer) child.classList.replace('border-gray-200', 'border-green-500'); });
+            }
+            document.getElementById('score-display').innerText = `Score: ${score}`;
+            setTimeout(() => { currentQuestion++; if (currentQuestion < quizData.length) showQuestion(); else showResult(); }, 1500);
+        }
+        function showFeedback() { const el = document.getElementById('feedback'); el.classList.remove('hidden'); el.classList.add('animate-bounce-short'); setTimeout(() => { el.classList.add('hidden'); el.classList.remove('animate-bounce-short'); }, 1000); }
+        function showResult() {
+            document.getElementById('quiz-screen').classList.add('hidden'); document.getElementById('result-screen').classList.remove('hidden');
+            document.getElementById('progress').style.width = "100%"; document.getElementById('final-score').innerText = `${score}/${quizData.length}`;
+            const emoji = document.getElementById('result-emoji');
+            if (score === 10) emoji.innerText = "🏆 PERFECTION !"; else if (score >= 7) emoji.innerText = "🌟 EXCELLENT !"; else if (score >= 5) emoji.innerText = "👍 BIEN JOUÉ !"; else emoji.innerText = "📚 RÉVISE ENCORE !";
+        }
+        function restartGame() { currentQuestion = 0; score = 0; document.getElementById('score-display').innerText = `Score: 0`; document.getElementById('result-screen').classList.add('hidden'); document.getElementById('start-screen').classList.remove('hidden'); }
+    </script>
 </body>
 </html>
